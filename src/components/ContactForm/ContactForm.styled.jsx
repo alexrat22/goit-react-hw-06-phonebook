@@ -4,7 +4,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 15px;
+  padding: 15px 0;
 `;
 export const AddButton = styled.button`
   width: 120px;

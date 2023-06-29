@@ -1,18 +1,20 @@
 import styled from '@emotion/styled';
 
-export const FormContainer = styled.div`
-  width: 100%;
+export const MainContainer = styled.div`
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+`;
+
+export const FormContainer = styled.div`
+  width: 310px;
+  margin-right: auto;
+  margin-left: auto;
   border-bottom: 3px solid rgba(86, 141, 229, 1);
 `;
 
 export const ContactsContainer = styled.div`
   margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
 `;
 
 export const Title = styled.h1`

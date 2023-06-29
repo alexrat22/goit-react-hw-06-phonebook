@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useLocalStorage from './hooks/useLocalStorage';
 import {
+  MainContainer,
   FormContainer,
   ContactsContainer,
   Title,
@@ -47,7 +48,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <MainContainer>
       <FormContainer>
         <Title>Phonebook</Title>
         <ContactForm onSubmit={addContact} />
@@ -60,6 +61,6 @@ export default function App() {
           onRemoveBtnClick={removeContact}
         />
       </ContactsContainer>
-    </>
+    </MainContainer>
   );
 }
