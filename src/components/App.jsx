@@ -6,7 +6,7 @@ import {
   TitleContacts,
 } from './App.styled';
 import ContactForm from './ContactForm/ContactForm';
-import ContactsList from './ContactsList/ContactsList';
+import ContactsList from './ContactsList/contactslist';
 import Filter from './Filter/Filter';
 
 export default function App() {
