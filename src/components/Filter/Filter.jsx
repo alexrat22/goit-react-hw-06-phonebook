@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { getFilter } from 'redux/selectors';
+import { setFilter } from 'redux/filterSlice';
 import { Input } from '../ContactForm/ContactForm.styled';
 
-export default function Filter({ value, onChange }) {
+export default function Filter() {
+  const dispatch = useDispatch();
+  const filter = useSelector(getFilter);
+
   return (
     <div>
       <label>
@@ -9,16 +14,11 @@ export default function Filter({ value, onChange }) {
         <Input
           type="text"
           name="filter"
-          value={value}
-          onChange={onChange}
+          value={filter}
+          onChange={evt => dispatch(setFilter(evt.currentTarget.value))}
           required
         />
       </label>
     </div>
   );
 }
-
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
