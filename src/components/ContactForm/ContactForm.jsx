@@ -18,10 +18,13 @@ export default function ContactForm() {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    const names = contacts.map(contact => contact.name);
     const newContact = { id: shortid.generate(), name, number };
 
-    if (names.includes(name)) {
+    if (
+      contacts.find(
+        contact => contact.name.toLowerCase() === name.toLowerCase()
+      )
+    ) {
       alert(`${name} is already in contacts`);
     } else dispatch(addContact(newContact));
     reset();
